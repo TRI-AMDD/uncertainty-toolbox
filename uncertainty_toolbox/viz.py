@@ -314,12 +314,12 @@ def plot_calibration(
 
     # Plot
     ax.plot([0, 1], [0, 1], "--", label="Ideal", c="#ff7f0e")
-    ax.plot(exp_proportions, obs_proportions, label=curve_label, c="#1f77b4")
-    ax.fill_between(exp_proportions, exp_proportions, obs_proportions, alpha=0.2)
+    ax.plot(obs_proportions, exp_proportions, label=curve_label, c="#1f77b4")
+    ax.fill_between(obs_proportions, obs_proportions, exp_proportions, alpha=0.2)
 
     # Format plot
-    ax.set_xlabel("Predicted Proportion in Interval")
-    ax.set_ylabel("Observed Proportion in Interval")
+    ax.set_xlabel("Observed Proportion in Interval")
+    ax.set_ylabel("Predicted Proportion in Interval")
     ax.axis("square")
 
     buff = 0.01
